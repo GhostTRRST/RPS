@@ -3,6 +3,7 @@
 #  date written: 10/4/2024
 #
 #   description: ROCK PAPER SCISSORS
+## variables, Round, points
 Round = 0
 p1 = 0
 p2 = 0
@@ -14,36 +15,47 @@ while Playing:
     P1 = input("Player 1, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
     P2 = input("Player 2, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
     ## Player 1
-    if (P1 == "R" and P2 == "S"):
+    if (P1 == "R" and P2 == "S" or P1 == "R" and P2 == "L"):
         print("Player 1 wins!")
         Round += 1
         p1 += 1
-    elif (P1 == "P" and P2 == "R"):
+    elif (P1 == "P" and P2 == "R" or P1 == "P" and P2 == "SP"):
         print("Player 1 wins!")
         Round += 1
         p1 += 1
-    elif (P1 == "S" and P2 == "P"):
+    elif (P1 == "S" and P2 == "P" or P1 == "S" and P2 == "L"):
         print("player 1 wins!")
         Round += 1
         p1 += 1
-    elif (P1 == "L" and P2 == "P"):
+    elif (P1 == "L" and P2 == "P" or P1 == "L" and P2 == "SP"):
         print("player 1 wins!")
         Round += 1
         p1 += 1
-    
+    elif (P1 == "SP" and P2 == "R" or P1 == "SP" and P2 == "S"):
+        print("Player 1 wins!")
+        Round += 1
+        p1 += 1    
 ## player 2
-    elif (P2 == "P" and P1 == "R"):
+    elif (P2 == "P" and P1 == "R" or P2 == "P" and P1 == "SP"):
         print("Player 2 wins!")
         Round += 1
         p2 += 1
-    elif (P2 == "S" and P1 == "P"):
+    elif (P2 == "S" and P1 == "P" or P2 == "S" and P1 == "L"):
         print("player 2 wins!")
         Round += 1
         p2 += 1
-    elif (P2 == "R" and P1 == "S"):
+    elif (P2 == "R" and P1 == "S" or P2 == "R" and P1 == "L"):
         print("Player 2 wins!")
         Round += 1
         p2 += 1
+    elif (P2 == "L" and P1 == "P" or P2 == "L" and P1 == "SP"):
+        print("player 2 wins!")
+        Round += 1
+        p1 += 1
+    elif (P2 == "SP" and P1 == "R" or P2 == "SP" and P1 == "S"):
+        print("Player 2 wins!")
+        Round += 1
+        p1 += 1  
 ## Tie
     else:
         print("Its a tie!")
