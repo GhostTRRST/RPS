@@ -1,1 +1,82 @@
+#  project: day17.py
+#        author: Jaydriel Montes Connolly <jmontes-connolly2709545@woonsocketschools.com>
+#  date written: 10/4/2024
+#
+#   description: ROCK PAPER SCISSORS
+Round = 0
+p1 = 0
+p2 = 0
+Playing = True
+print("ROCK PAPER SCISSORS")
+print()
+while Playing:
+    print("Round", Round + 1)
+    P1 = input("Player 1, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
+    P2 = input("Player 2, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
+    ## Player 1
+    if (P1 == "R" and P2 == "S"):
+        print("Player 1 wins!")
+        Round += 1
+        p1 += 1
+    elif (P1 == "P" and P2 == "R"):
+        print("Player 1 wins!")
+        Round += 1
+        p1 += 1
+    elif (P1 == "S" and P2 == "P"):
+        print("player 1 wins!")
+        Round += 1
+        p1 += 1
+    elif (P1 == "L" and P2 == "P"):
+        print("player 1 wins!")
+        Round += 1
+        p1 += 1
+    
+## player 2
+    elif (P2 == "P" and P1 == "R"):
+        print("Player 2 wins!")
+        Round += 1
+        p2 += 1
+    elif (P2 == "S" and P1 == "P"):
+        print("player 2 wins!")
+        Round += 1
+        p2 += 1
+    elif (P2 == "R" and P1 == "S"):
+        print("Player 2 wins!")
+        Round += 1
+        p2 += 1
+## Tie
+    else:
+        print("Its a tie!")
+        Round += 1
+## Endgame choice
+    if p1 == 2 :
+        Playing = False
+        print("Player 1 wins the game!")
+        Restart = input("Would you like to play again? (y/n) : ")
+        if (Restart == "y"):
+            Playing = True
+            Round = 0
+        elif (Restart == "n"):
+            Playing = False
+            print("Thanks for playing!")
+
+    elif p2 == 2 :
+        Playing = False
+        print("Player 2 wins the game!")
+        Restart = input("Would you like to play again? (y/n) : ")
+        if (Restart == "y"):
+            Playing = True
+            Round = 0
+        elif (Restart == "n"):
+            Playing = False
+            print("Thanks for playing!")
+
+
+
+
+
+
+
+
+
 
