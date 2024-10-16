@@ -1,16 +1,17 @@
-#  project: rock paper scissors plus.py
+#       project: rockPaperScissorsPlus.py    # And, actually, you've called it rps.py
 #        author: Jaydriel Montes Connolly <jmontes-connolly2709545@woonsocketschools.com>
+### Clearly you need to give Rey some credit here...
 #  date written: 10/9/2024
 #
-#   description: ROCK PAPER SCISSORS
+#   description: ROCK PAPER SCISSORS    # Can you say something more descriptive here?
 ## variables, Round, points
-Round = 0
-p1 = 0
+round = 0    # Change all instances of Round to round
+p1 = 0    # These are not very descriptive. is p1 = playerOne's score? or is it their guess?
 p2 = 0
-Playing = True
+isPlaying = True
 print("ROCK PAPER SCISSORS")
 print()
-while Playing:
+while isPlaying is True:
     print("Round", Round + 1)
     P1 = input("Player 1, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
     P2 = input("Player 2, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
@@ -20,7 +21,7 @@ while Playing:
         Round += 1
         p1 += 1
     elif (P1 == "P" and P2 == "R" or P1 == "P" and P2 == "SP"):
-        print("Player 1 wins!")
+        print("Player 1 wins!")    # Your logic is sound but not very descriptive
         Round += 1
         p1 += 1
     elif (P1 == "S" and P2 == "P" or P1 == "S" and P2 == "L"):
@@ -35,7 +36,7 @@ while Playing:
         print("Player 1 wins!")
         Round += 1
         p1 += 1    
-## player 2
+    ## player 2
     elif (P2 == "P" and P1 == "R" or P2 == "P" and P1 == "SP"):
         print("Player 2 wins!")
         Round += 1
@@ -56,31 +57,31 @@ while Playing:
         print("Player 2 wins!")
         Round += 1
         p1 += 1  
-## Tie
+    ## Tie
     else:
         print("Its a tie!")
         Round += 1
-## Endgame choice
+    ## Endgame choice
     if p1 == 2 :
-        Playing = False
+        isPlaying = False
         print("Player 1 wins the game!")
         Restart = input("Would you like to play again? (y/n) : ")
-        if (Restart == "y"):
-            Playing = True
+        if (restart == "y"):
+            isPlaying = True
             Round = 0
-        elif (Restart == "n"):
-            Playing = False
+        elif (restart == "n"):
+            isPlaying = False
             print("Thanks for playing!")
 
     elif p2 == 2 :
-        Playing = False
+        isPlaying = False
         print("Player 2 wins the game!")
-        Restart = input("Would you like to play again? (y/n) : ")
-        if (Restart == "y"):
-            Playing = True
-            Round = 0
-        elif (Restart == "n"):
-            Playing = False
+        restart = input("Would you like to play again? (y/n) : ")    # These user feedback have considerably more heart.
+        if (restart == "y"):
+            isPlaying = True
+            round = 0
+        elif (restart == "n"):
+            isPlaying = False
             print("Thanks for playing!")
 
 
