@@ -1,17 +1,18 @@
-#  project: rock paper scissors plus.py
-#        author: Jaydriel Montes Connolly <jmontes-connolly2709545@woonsocketschools.com>
-#  date written: 10/9/2024
-#
-#   description: ROCK PAPER SCISSORS
+"""
+       project: rock paper scissors plus.py
+        author: Jaydriel Montes Connolly <jmontes-connolly2709545@woonsocketschools.com>
+  date written: 10/9/2024
+
+   description: ROCK PAPER SCISSORS
+"""
 ## variables, Round, points
-Round = 0
-p1 = 0
-p2 = 0
-Playing = True
-print("ROCK PAPER SCISSORS")
+round = p1 = p2 = 0
+isPlaying = True
+
+print("ROCK PAPER SCISSORS \n")
 print()
-while Playing:
-    print("Round", Round + 1)
+while isPlaying is True:
+    print(f"Round {round + 1})
     P1 = input("Player 1, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
     P2 = input("Player 2, select (R)ock, (P)aper, (S)cissors, (L)izard, or (SP)ock : ")
     ## Player 1
